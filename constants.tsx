@@ -46,7 +46,7 @@ export const ASSETS = {
   // Reutilizadas de empresariales (solo upscale compatible)
   CAFETALES: `${CDN_ALT}/e_upscale/f_auto,q_90,w_1920/lpet/cafetales.png`,
   CABANA: `${CDN_ALT}/e_upscale/f_auto,q_90,w_1000/lpet/cabana-interior.png`,
-  COFFEE_TOUR: `${SCENE_HQ}/lpet-eventos/coffee-tour-guiado.png`,
+  COFFEE_TOUR: `${UP_HQ}/lpet-eventos/coffee-tour-guiado.png`,
 };
 
 // WHATSAPP RESERVAS
