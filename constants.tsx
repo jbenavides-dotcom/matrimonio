@@ -19,33 +19,33 @@ import {
 const CDN = "https://res.cloudinary.com/dkqocgknd/image/upload";
 const CDN_ALT = "https://res.cloudinary.com/dsylu9a7k/image/upload";
 
-// Pipelines de transformación:
-// FACE = upscale + restauración facial IA + brillo + mejora (para fotos con personas)
-// SCENE = upscale + brillo + mejora (para fotos de escenas/paisajes)
-const FACE_FULL = `${CDN}/e_upscale/e_gen_restore/e_improve/e_auto_brightness/f_auto,q_90,w_1920`;
-const FACE_HQ = `${CDN}/e_upscale/e_gen_restore/e_improve/e_auto_brightness/f_auto,q_90,w_1000`;
-const SCENE_FULL = `${CDN}/e_upscale/e_improve/e_auto_brightness/f_auto,q_90,w_1920`;
-const SCENE_HQ = `${CDN}/e_upscale/e_improve/e_auto_brightness/f_auto,q_90,w_1000`;
-const SCENE_CARD = `${CDN}/e_upscale/e_improve/e_auto_brightness/f_auto,q_90,w_800`;
+// Pipelines: algunas fotos no soportan efectos extra después de e_upscale
+const UP_FULL = `${CDN}/e_upscale/f_auto,q_90,w_1920`;
+const UP_HQ = `${CDN}/e_upscale/f_auto,q_90,w_1000`;
+const UP_CARD = `${CDN}/e_upscale/f_auto,q_90,w_800`;
+// Enhanced: upscale + restauración facial + mejora (solo fotos compatibles)
+const ENH_FULL = `${CDN}/e_upscale/e_gen_restore/e_improve/e_auto_brightness/f_auto,q_90,w_1920`;
+const ENH_HQ = `${CDN}/e_upscale/e_gen_restore/e_improve/e_auto_brightness/f_auto,q_90,w_1000`;
 
 export const ASSETS = {
-  // Hero y CTA - rostros, resolución completa
-  HERO_FULL: `${FACE_FULL}/lpet-matrimonios/pareja-novios.jpg`,
-  CTA_BG: `${SCENE_FULL}/lpet-matrimonios/coctel-recepcion.jpg`,
-  // Fotos con personas - restauración facial
-  CEREMONIA: `${FACE_HQ}/lpet-matrimonios/ceremonia.jpg`,
-  COCTEL: `${FACE_HQ}/lpet-matrimonios/coctel-recepcion.jpg`,
-  NOVIA_CABANA: `${FACE_HQ}/lpet-matrimonios/novia-cabana.jpg`,
-  NOVIA_NATURALEZA: `${FACE_HQ}/lpet-matrimonios/novia-naturaleza.jpg`,
-  INVITADOS: `${FACE_HQ}/lpet-matrimonios/invitados-deck.jpg`,
-  // Fotos de escenas - sin restauración facial
-  MUSICO: `${SCENE_HQ}/lpet-matrimonios/musico-atardecer.jpg`,
-  CHEFS: `${SCENE_HQ}/lpet-matrimonios/chefs-fogon.jpg`,
-  DJ_FIESTA: `${SCENE_HQ}/lpet-matrimonios/dj-fiesta.jpg`,
-  TUCAN: `${SCENE_CARD}/lpet-matrimonios/tucan.jpg`,
-  // Reutilizadas de empresariales (cuenta dsylu9a7k)
-  CAFETALES: `${CDN_ALT}/e_upscale/e_improve/e_auto_brightness/f_auto,q_90,w_1920/lpet/cafetales.png`,
-  CABANA: `${CDN_ALT}/e_upscale/e_improve/e_auto_brightness/f_auto,q_90,w_1000/lpet/cabana-interior.png`,
+  // Hero - compatible con enhance completo
+  HERO_FULL: `${ENH_FULL}/lpet-matrimonios/pareja-novios.jpg`,
+  // CTA - solo upscale (no soporta efectos extra)
+  CTA_BG: `${UP_FULL}/lpet-matrimonios/coctel-recepcion.jpg`,
+  // Compatible con enhance
+  CEREMONIA: `${ENH_HQ}/lpet-matrimonios/ceremonia.jpg`,
+  INVITADOS: `${ENH_HQ}/lpet-matrimonios/invitados-deck.jpg`,
+  // Solo upscale (no soportan efectos extra)
+  COCTEL: `${UP_HQ}/lpet-matrimonios/coctel-recepcion.jpg`,
+  NOVIA_CABANA: `${UP_HQ}/lpet-matrimonios/novia-cabana.jpg`,
+  NOVIA_NATURALEZA: `${UP_HQ}/lpet-matrimonios/novia-naturaleza.jpg`,
+  MUSICO: `${UP_HQ}/lpet-matrimonios/musico-atardecer.jpg`,
+  CHEFS: `${UP_HQ}/lpet-matrimonios/chefs-fogon.jpg`,
+  DJ_FIESTA: `${UP_HQ}/lpet-matrimonios/dj-fiesta.jpg`,
+  TUCAN: `${UP_CARD}/lpet-matrimonios/tucan.jpg`,
+  // Reutilizadas de empresariales (solo upscale compatible)
+  CAFETALES: `${CDN_ALT}/e_upscale/f_auto,q_90,w_1920/lpet/cafetales.png`,
+  CABANA: `${CDN_ALT}/e_upscale/f_auto,q_90,w_1000/lpet/cabana-interior.png`,
   COFFEE_TOUR: `${SCENE_HQ}/lpet-eventos/coffee-tour-guiado.png`,
 };
 
