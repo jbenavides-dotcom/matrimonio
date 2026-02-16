@@ -37,9 +37,9 @@ export const ASSETS = {
   CHEFS: `${CDN_UP_HQ}/lpet-matrimonios/chefs-fogon.jpg`,
   DJ_FIESTA: `${CDN_UP_HQ}/lpet-matrimonios/dj-fiesta.jpg`,
   TUCAN: `${CDN_UP_CARD}/lpet-matrimonios/tucan.jpg`,
-  // Reutilizadas de empresariales
-  CAFETALES: `${CDN_BASE}/e_upscale/f_auto,q_90,w_1920/lpet/cafetales.png`,
-  CABANA: `${CDN_BASE}/e_upscale/f_auto,q_90,w_1000/lpet/cabana-interior.png`,
+  // Reutilizadas de empresariales (cuenta dsylu9a7k)
+  CAFETALES: `https://res.cloudinary.com/dsylu9a7k/image/upload/e_upscale/f_auto,q_90,w_1920/lpet/cafetales.png`,
+  CABANA: `https://res.cloudinary.com/dsylu9a7k/image/upload/e_upscale/f_auto,q_90,w_1000/lpet/cabana-interior.png`,
   COFFEE_TOUR: `${CDN_UP_HQ}/lpet-eventos/coffee-tour-guiado.png`,
 };
 
