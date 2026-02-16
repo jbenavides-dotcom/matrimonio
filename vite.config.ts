@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  base: '/LP-ET-MATRIMONIO/',
+  base: '/matrimonio/',
   server: {
     port: 3004,
     host: '0.0.0.0',
