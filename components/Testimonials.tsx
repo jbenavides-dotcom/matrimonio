@@ -7,20 +7,17 @@ import { ASSETS } from '../constants';
 const TESTIMONIALS = [
   {
     quote: "Fue el matrimonio de nuestros sueños. Las montañas, los cafetales, el atardecer... todo fue absolutamente mágico. Nuestros invitados aún hablan de esa noche.",
-    name: "Carolina & Andrés",
-    detail: "Boda para 35 invitados",
+    label: "Boda para 35 invitados",
     image: ASSETS.CEREMONIA,
   },
   {
     quote: "Elegimos La Palma & El Tucán porque queríamos algo diferente, y superó todas nuestras expectativas. La comida, la decoración, el servicio... cada detalle fue perfecto.",
-    name: "Valentina & Santiago",
-    detail: "Boda para 30 invitados",
+    label: "Boda para 30 invitados",
     image: ASSETS.COCTEL,
   },
   {
     quote: "Nuestros invitados llegaron desde Bogotá y quedaron impresionados con el lugar. Las cabañas entre cafetales, la ceremonia al aire libre, la fiesta bajo las estrellas. Inolvidable.",
-    name: "María José & Felipe",
-    detail: "Destination wedding",
+    label: "Destination wedding",
     image: ASSETS.INVITADOS,
   },
 ];
@@ -43,7 +40,7 @@ const Testimonials: React.FC = () => {
               <div className="aspect-[4/3] overflow-hidden">
                 <img
                   src={testimonial.image}
-                  alt={`Matrimonio de ${testimonial.name}`}
+                  alt="Matrimonio en La Palma & El Tucán"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
@@ -54,8 +51,7 @@ const Testimonials: React.FC = () => {
                   "{testimonial.quote}"
                 </p>
                 <div className="border-t border-brand-beige/30 pt-4">
-                  <p className="text-brand-dark font-bold text-sm">{testimonial.name}</p>
-                  <p className="text-neutral-400 text-xs">{testimonial.detail}</p>
+                  <p className="text-neutral-400 text-xs uppercase tracking-wider">{testimonial.label}</p>
                 </div>
               </div>
             </div>
