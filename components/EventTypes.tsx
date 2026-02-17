@@ -10,8 +10,8 @@ const EventTypes: React.FC = () => {
     <section className="py-12 sm:py-16 lg:py-20 bg-white">
       <div ref={reveal.ref} className={`max-w-7xl mx-auto px-4 sm:px-6 ${reveal.isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-brand-dark mb-4 sm:mb-6">Todo lo que necesitan para su día perfecto</h2>
-          <p className="text-neutral-600 font-light text-sm sm:text-base">Nos encargamos de cada detalle para que ustedes solo se preocupen por disfrutar.</p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-brand-dark mb-4 sm:mb-6">Una celebración pensada para sentirse, no solo vivirse</h2>
+          <p className="text-neutral-600 font-light text-sm sm:text-base">Diseñamos contigo cada momento para que vivas una celebración íntima, auténtica y sin preocupaciones.</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">

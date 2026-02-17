@@ -30,8 +30,8 @@ const Testimonials: React.FC = () => {
       <div ref={reveal.ref} className={`max-w-7xl mx-auto px-4 sm:px-6 ${reveal.isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <span className="text-brand-pink text-xs uppercase tracking-[0.4em] font-bold mb-3 sm:mb-4 block">Testimonios</span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-brand-dark mb-4 sm:mb-6">Bodas que hicieron historia</h2>
-          <p className="text-neutral-500 font-light text-base sm:text-lg">Parejas que celebraron su amor en La Palma & El Tucán y vivieron un día inolvidable.</p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-brand-dark mb-4 sm:mb-6">Historias que comenzaron entre cafetales</h2>
+          <p className="text-neutral-500 font-light text-base sm:text-lg">Parejas que celebraron en La Palma & El Tucán Hotel y vivieron una experiencia inolvidable.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">

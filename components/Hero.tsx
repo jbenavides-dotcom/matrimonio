@@ -26,15 +26,15 @@ const Hero: React.FC = () => {
           </div>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif mb-4 sm:mb-6 leading-[1.15] text-white">
-            Tu matrimonio en una finca <br className="hidden sm:block" /><span className="italic text-brand-beige">cafetera de clase mundial</span>
+            Celebra tu matrimonio en medio <br className="hidden sm:block" /><span className="italic text-brand-beige">del bosque y el café</span>
           </h1>
 
           <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-4 sm:mb-6 max-w-2xl font-light leading-relaxed">
-            Rodeados de montañas, cafetales y bosque de niebla, a solo 90 minutos de Bogotá
+            En una finca cafetera reconocida mundialmente
           </p>
 
           <p className="text-base sm:text-lg text-white/80 mb-6 sm:mb-8 max-w-xl font-light leading-relaxed">
-            Un escenario natural e íntimo para celebrar el día más importante de sus vidas.
+            Rodeados de montañas, cafetales y bosque de niebla, a solo 90 minutos de Bogotá. Un escenario natural e íntimo para celebrar tu historia con calma, conexión y propósito.
           </p>
 
           <div className="flex flex-wrap items-center gap-3 sm:gap-4 mb-6 sm:mb-8">

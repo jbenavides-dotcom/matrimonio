@@ -1,16 +1,15 @@
 
 import React from 'react';
-import { MapPin, Users, Home, Heart, Award, Leaf, Settings } from 'lucide-react';
+import { MapPin, Users, Home, Heart, Award, Leaf } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const WHY_ITEMS = [
-  { icon: <MapPin className="w-5 h-5" />, title: "90 minutos de Bogotá", text: "Acceso fácil sin perder la sensación de estar en otro mundo." },
-  { icon: <Users className="w-5 h-5" />, title: "Hasta 40 personas", text: "Ideal para celebraciones íntimas y exclusivas." },
-  { icon: <Home className="w-5 h-5" />, title: "20 cabañas privadas", text: "Alojamiento exclusivo entre cafetales para tus seres queridos." },
-  { icon: <Heart className="w-5 h-5" />, title: "Ceremonia al aire libre", text: "Escenarios naturales con vistas a montañas y bosque de niebla." },
-  { icon: <Award className="w-5 h-5" />, title: "Finca galardonada", text: "Reconocimientos internacionales en café de especialidad." },
-  { icon: <Settings className="w-5 h-5" />, title: "100% personalizable", text: "Cada detalle diseñado según la visión de los novios." },
-  { icon: <Leaf className="w-5 h-5" />, title: "Gastronomía farm-to-table", text: "Menú artesanal con ingredientes de nuestra huerta orgánica." },
+  { icon: <MapPin className="w-5 h-5" />, title: "90 minutos de Bogotá", text: "Acceso fácil sin perder la sensación de estar en medio del bosque, rodeado de cafetales y montaña." },
+  { icon: <Users className="w-5 h-5" />, title: "Celebraciones íntimas (hasta 40 personas)", text: "Un espacio ideal para bodas conscientes y exclusivas, donde cada invitado hace parte real del momento." },
+  { icon: <Home className="w-5 h-5" />, title: "Cabañas privadas entre cafetales", text: "20 cabañas independientes inmersas en la naturaleza para que tu celebración se convierta en una experiencia de fin de semana." },
+  { icon: <Heart className="w-5 h-5" />, title: "Ceremonia al aire libre", text: "Escenarios naturales con vista a montañas y bosque de niebla, donde el paisaje es el verdadero protagonista." },
+  { icon: <Award className="w-5 h-5" />, title: "Finca cafetera reconocida mundialmente", text: "Parte de un proyecto galardonado en cafés especiales, cultivados bajo principios de agricultura regenerativa." },
+  { icon: <Leaf className="w-5 h-5" />, title: "Experiencia personalizada y gastronomía de origen", text: "Cada detalle se diseña contigo, acompañado de una propuesta gastronómica elaborada con ingredientes frescos y locales." },
 ];
 
 const WhySection: React.FC = () => {
@@ -23,9 +22,9 @@ const WhySection: React.FC = () => {
 
       <div ref={reveal.ref} className={`max-w-7xl mx-auto px-4 sm:px-6 relative z-10 ${reveal.isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <span className="text-brand-pink text-xs uppercase tracking-[0.4em] font-bold mb-3 sm:mb-4 block">¿Por qué elegirnos?</span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-brand-dark mb-4 sm:mb-6">El lugar que siempre soñaron</h2>
-          <p className="text-neutral-500 font-light text-base sm:text-lg">Un escenario natural e íntimo para el día más importante de sus vidas.</p>
+          <span className="text-brand-pink text-xs uppercase tracking-[0.4em] font-bold mb-3 sm:mb-4 block">¿Por qué elegir La Palma & El Tucán Hotel?</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-brand-dark mb-4 sm:mb-6">Un lugar diferente para una historia única</h2>
+          <p className="text-neutral-500 font-light text-base sm:text-lg">Matrimonios íntimos en una finca cafetera reconocida mundialmente; una celebración diseñada en armonía con la naturaleza.</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">

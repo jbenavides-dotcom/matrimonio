@@ -93,32 +93,32 @@ export const NAV_LINKS: NavLink[] = [
 export const EVENT_TYPES = [
   {
     title: "Ceremonia al Aire Libre",
-    description: "Digan 'sí, acepto' rodeados de montañas, cafetales y bosque de niebla.",
+    description: "Di \"sí, acepto\" rodeado de cafetales, montañas y bosque de niebla.",
     icon: <Heart className="w-6 h-6" />,
   },
   {
     title: "Recepción & Cóctel",
-    description: "Celebra con tus invitados en espacios únicos con vistas espectaculares.",
+    description: "Comparte con tus invitados en espacios integrados al paisaje, con vistas abiertas y atmósfera natural.",
     icon: <Wine className="w-6 h-6" />,
   },
   {
-    title: "Gastronomía Artesanal",
-    description: "Menú farm-to-table con ingredientes de nuestra huerta orgánica.",
+    title: "Gastronomía de Origen",
+    description: "Propuesta elaborada con ingredientes frescos y locales, inspirada en nuestra huerta y el territorio.",
     icon: <Utensils className="w-6 h-6" />,
   },
   {
     title: "Música en Vivo & DJ",
-    description: "Desde guitarra al atardecer hasta fiesta con DJ profesional.",
+    description: "Desde un atardecer acústico hasta una celebración vibrante bajo las estrellas.",
     icon: <Music className="w-6 h-6" />,
   },
   {
-    title: "Alojamiento para Invitados",
-    description: "20 cabañas privadas entre cafetales para tus seres queridos.",
+    title: "Alojamiento entre Cafetales",
+    description: "Cabañas privadas para que tus invitados vivan la experiencia completa de fin de semana.",
     icon: <Home className="w-6 h-6" />,
   },
   {
-    title: "Decoración & Ambientación",
-    description: "Espacios naturales que se transforman según tu visión.",
+    title: "Ambientación Personalizada",
+    description: "Cada detalle se diseña en armonía con el entorno y la esencia de tu historia.",
     icon: <Palette className="w-6 h-6" />,
   },
 ];
@@ -127,32 +127,32 @@ export const EVENT_TYPES = [
 export const JOURNEY_STEPS = [
   {
     number: "01",
-    title: "Preparativos en el Paraíso",
-    description: "Prepárense rodeados de naturaleza en cabañas privadas entre cafetales. Champagne, risas y la emoción del gran día en un entorno único.",
+    title: "Preparativos entre cafetales",
+    description: "Comienza el día en cabañas privadas rodeadas de bosque y montaña. Calma, luz natural y la emoción compartida antes del gran momento.",
     image: ASSETS.CHAMPAGNE,
   },
   {
     number: "02",
-    title: "La Ceremonia",
-    description: "Al aire libre, con las montañas como testigo y el sonido de la naturaleza como banda sonora. Un escenario que ningún salón puede igualar.",
+    title: "La ceremonia",
+    description: "Al aire libre, con el paisaje como testigo y el sonido del bosque como banda sonora. Un escenario que ningún salón puede replicar.",
     image: ASSETS.VOTOS,
   },
   {
     number: "03",
-    title: "Cóctel & Celebración",
-    description: "Brindis al atardecer con cócteles artesanales y música en vivo. El momento perfecto para compartir con familia y amigos.",
+    title: "Cóctel al atardecer",
+    description: "Brinda entre cafetales con coctelería artesanal y música en vivo, mientras la montaña se tiñe de dorado.",
     image: ASSETS.PAREJA_BAR,
   },
   {
     number: "04",
-    title: "Cena Farm-to-Table",
-    description: "Un banquete artesanal con ingredientes de nuestra huerta orgánica. Mesas elegantes en espacios naturales para una noche inolvidable.",
+    title: "Cena de origen",
+    description: "Un banquete inspirado en ingredientes frescos y locales, servido en espacios que se integran con el entorno natural.",
     image: ASSETS.MESA_RECEPCION,
   },
   {
     number: "05",
-    title: "Fiesta & Recuerdos",
-    description: "Confeti, risas y abrazos bajo las estrellas. Momentos que quedarán grabados para siempre en la memoria de todos.",
+    title: "Celebración & Recuerdos",
+    description: "Risas, abrazos y celebración en un ambiente íntimo, donde cada recuerdo se vive sin prisa.",
     image: ASSETS.SALIDA_CONFETI,
   },
 ];
@@ -160,11 +160,11 @@ export const JOURNEY_STEPS = [
 // EXPERIENCIAS DE BODA
 export const ACTIVITIES = [
   { label: "Ceremonia en la Naturaleza", image: ASSETS.CEREMONIA, icon: <TreePine className="w-5 h-5" /> },
-  { label: "Recepción Elegante", image: ASSETS.MESA_RECEPCION, icon: <Wine className="w-5 h-5" /> },
-  { label: "Preparativos de Ensueño", image: ASSETS.NOVIA_RIENDO, icon: <Heart className="w-5 h-5" /> },
-  { label: "Momentos Únicos", image: ASSETS.ABRAZO_DORADA, icon: <Flame className="w-5 h-5" /> },
-  { label: "Celebración & Fiesta", image: ASSETS.SALIDA_CONFETI, icon: <PartyPopper className="w-5 h-5" /> },
-  { label: "Coffee Tour para Invitados", image: ASSETS.COFFEE_TOUR, icon: <Coffee className="w-5 h-5" /> },
+  { label: "Recepción con Identidad", image: ASSETS.MESA_RECEPCION, icon: <Wine className="w-5 h-5" /> },
+  { label: "Preparativos con Calma", image: ASSETS.NOVIA_RIENDO, icon: <Heart className="w-5 h-5" /> },
+  { label: "Instantes Inolvidables", image: ASSETS.ABRAZO_DORADA, icon: <Flame className="w-5 h-5" /> },
+  { label: "Celebración Íntima", image: ASSETS.SALIDA_CONFETI, icon: <PartyPopper className="w-5 h-5" /> },
+  { label: "Experiencia Cafetera para Invitados", image: ASSETS.COFFEE_TOUR, icon: <Coffee className="w-5 h-5" /> },
 ];
 
 // DIRECCIONES

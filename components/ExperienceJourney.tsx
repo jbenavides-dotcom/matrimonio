@@ -12,8 +12,8 @@ const ExperienceJourney: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div ref={headerReveal.ref} className={`text-center max-w-2xl mx-auto mb-12 sm:mb-16 lg:mb-20 ${headerReveal.isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
           <span className="text-brand-pink text-xs uppercase tracking-[0.4em] font-bold mb-3 sm:mb-4 block">La Experiencia</span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-brand-dark mb-4 sm:mb-6">La experiencia de su matrimonio</h2>
-          <p className="text-neutral-600 font-light text-sm sm:text-base">Cada momento está diseñado para que vivan un día mágico e irrepetible.</p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-brand-dark mb-4 sm:mb-6">La experiencia de tu matrimonio</h2>
+          <p className="text-neutral-600 font-light text-sm sm:text-base">Cada momento fluye en armonía con la naturaleza, creando una celebración auténtica e inolvidable.</p>
         </div>
 
         <div ref={stepsReveal.ref} className={`space-y-8 sm:space-y-12 lg:space-y-16 ${stepsReveal.isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>

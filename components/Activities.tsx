@@ -11,8 +11,8 @@ const Activities: React.FC = () => {
       <div ref={reveal.ref} className={`max-w-7xl mx-auto px-4 sm:px-6 ${reveal.isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
           <span className="text-brand-pink text-xs uppercase tracking-[0.4em] font-bold mb-3 sm:mb-4 block">Momentos</span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-brand-dark mb-4 sm:mb-6">Momentos que recordarán por siempre</h2>
-          <p className="text-neutral-600 font-light text-sm sm:text-base">Cada experiencia está pensada para hacer de su celebración algo único e inolvidable.</p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-brand-dark mb-4 sm:mb-6">Momentos que se sienten, no solo se viven</h2>
+          <p className="text-neutral-600 font-light text-sm sm:text-base">Cada instante fluye en armonía con la naturaleza para crear recuerdos auténticos y memorables.</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
