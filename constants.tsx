@@ -159,12 +159,12 @@ export const JOURNEY_STEPS = [
 
 // EXPERIENCIAS DE BODA
 export const ACTIVITIES = [
-  { label: "Ceremonia en la Naturaleza", image: ASSETS.CEREMONIA, icon: <TreePine className="w-5 h-5" /> },
-  { label: "Recepción con Identidad", image: ASSETS.MESA_RECEPCION, icon: <Wine className="w-5 h-5" /> },
-  { label: "Preparativos con Calma", image: ASSETS.NOVIA_RIENDO, icon: <Heart className="w-5 h-5" /> },
-  { label: "Instantes Inolvidables", image: ASSETS.ABRAZO_DORADA, icon: <Flame className="w-5 h-5" /> },
-  { label: "Celebración Íntima", image: ASSETS.SALIDA_CONFETI, icon: <PartyPopper className="w-5 h-5" /> },
-  { label: "Experiencia Cafetera para Invitados", image: ASSETS.COFFEE_TOUR, icon: <Coffee className="w-5 h-5" /> },
+  { label: "Ceremonia en la Naturaleza", text: "Un \"sí, acepto\" rodeado de montañas, cafetales y bosque de niebla.", image: ASSETS.CEREMONIA, icon: <TreePine className="w-5 h-5" /> },
+  { label: "Recepción con Identidad", text: "Mesas, detalles y gastronomía que reflejan tu esencia en un entorno natural.", image: ASSETS.MESA_RECEPCION, icon: <Wine className="w-5 h-5" /> },
+  { label: "Preparativos con Calma", text: "Luz suave, risas compartidas y la emoción de comenzar una nueva etapa.", image: ASSETS.NOVIA_RIENDO, icon: <Heart className="w-5 h-5" /> },
+  { label: "Instantes Inolvidables", text: "Miradas, abrazos y atardeceres que quedan grabados para siempre.", image: ASSETS.ABRAZO_DORADA, icon: <Flame className="w-5 h-5" /> },
+  { label: "Celebración Íntima", text: "Alegría compartida en un ambiente cercano y lleno de significado.", image: ASSETS.SALIDA_CONFETI, icon: <PartyPopper className="w-5 h-5" /> },
+  { label: "Experiencia Cafetera para Invitados", text: "Un recorrido por nuestra finca para que el café también sea parte de tu historia.", image: ASSETS.COFFEE_TOUR, icon: <Coffee className="w-5 h-5" /> },
 ];
 
 // DIRECCIONES

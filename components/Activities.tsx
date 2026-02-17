@@ -24,12 +24,15 @@ const Activities: React.FC = () => {
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-              <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-brand-pink flex items-center justify-center text-white">
-                  {activity.icon}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+              <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-10 h-10 rounded-full bg-brand-pink flex items-center justify-center text-white flex-shrink-0">
+                    {activity.icon}
+                  </div>
+                  <span className="text-white font-bold text-sm sm:text-base">{activity.label}</span>
                 </div>
-                <span className="text-white font-bold text-sm sm:text-base">{activity.label}</span>
+                <p className="text-white/80 text-xs sm:text-sm font-light leading-relaxed pl-[52px]">{activity.text}</p>
               </div>
             </div>
           ))}
