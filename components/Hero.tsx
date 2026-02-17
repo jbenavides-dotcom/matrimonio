@@ -63,7 +63,8 @@ const Hero: React.FC = () => {
             </a>
 
             <div className="flex items-center justify-center sm:justify-start gap-3 sm:gap-4 text-white/80 px-4 sm:px-6 py-3 sm:py-4 glass-morphism rounded-xl">
-              <span className="text-xs uppercase tracking-widest font-medium">20 cabañas privadas entre cafetales</span>
+              <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-brand-pink" />
+              <span className="text-xs uppercase tracking-widest font-medium">Zipacón, Cundinamarca</span>
             </div>
           </div>
         </div>
