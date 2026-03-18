@@ -2,51 +2,53 @@ import React, { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { ASSETS } from '../constants';
-
-const TESTIMONIALS = [
-  {
-    quote: "Fue el matrimonio de nuestros sueños. Las montañas, los cafetales, el atardecer... todo fue absolutamente mágico. Nuestros invitados aún hablan de esa noche.",
-    label: "Boda para 35 invitados",
-    image: ASSETS.CEREMONIA,
-    source: 'Booking' as const,
-  },
-  {
-    quote: "Elegimos La Palma & El Tucán porque queríamos algo diferente, y superó todas nuestras expectativas. La comida, la decoración, el servicio... cada detalle fue perfecto.",
-    label: "Boda para 30 invitados",
-    image: ASSETS.MESA_RECEPCION,
-    source: 'TripAdvisor' as const,
-  },
-  {
-    quote: "Nuestros invitados llegaron desde Bogotá y quedaron impresionados con el lugar. Las cabañas entre cafetales, la ceremonia al aire libre, la fiesta bajo las estrellas. Inolvidable.",
-    label: "Destination wedding",
-    image: ASSETS.ABRAZO_DORADA,
-    source: 'Booking' as const,
-  },
-  {
-    quote: "Cada rincón de la finca fue parte de nuestra celebración. La ceremonia entre cafetales, el cóctel al atardecer, la cena bajo las estrellas. Un lugar que no necesita decoración.",
-    label: "Boda íntima",
-    image: ASSETS.VOTOS,
-    source: 'TripAdvisor' as const,
-  },
-  {
-    quote: "Buscábamos un venue con alma, no un salón genérico. La Palma & El Tucán fue exactamente eso: un lugar con historia, con naturaleza y con un equipo que hizo todo posible.",
-    label: "Boda para 25 invitados",
-    image: ASSETS.SALIDA_CONFETI,
-    source: 'Booking' as const,
-  },
-  {
-    quote: "La gastronomía fue espectacular. Ingredientes frescos, presentación impecable y el café de especialidad como cierre perfecto. Nuestros invitados quedaron encantados.",
-    label: "Boda gastronómica",
-    image: ASSETS.PAREJA_BAR,
-    source: 'TripAdvisor' as const,
-  },
-];
+import { useI18n } from '../i18n';
 
 const Testimonials: React.FC = () => {
   const reveal = useScrollReveal();
+  const { t } = useI18n();
   const [currentIndex, setCurrentIndex] = useState(0);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const pauseRef = useRef(false);
+
+  const TESTIMONIALS = [
+    {
+      quote: t('testimonial_1_quote'),
+      label: t('testimonial_1_label'),
+      image: ASSETS.CEREMONIA,
+      source: 'Booking' as const,
+    },
+    {
+      quote: t('testimonial_2_quote'),
+      label: t('testimonial_2_label'),
+      image: ASSETS.MESA_RECEPCION,
+      source: 'TripAdvisor' as const,
+    },
+    {
+      quote: t('testimonial_3_quote'),
+      label: t('testimonial_3_label'),
+      image: ASSETS.ABRAZO_DORADA,
+      source: 'Booking' as const,
+    },
+    {
+      quote: t('testimonial_4_quote'),
+      label: t('testimonial_4_label'),
+      image: ASSETS.VOTOS,
+      source: 'TripAdvisor' as const,
+    },
+    {
+      quote: t('testimonial_5_quote'),
+      label: t('testimonial_5_label'),
+      image: ASSETS.SALIDA_CONFETI,
+      source: 'Booking' as const,
+    },
+    {
+      quote: t('testimonial_6_quote'),
+      label: t('testimonial_6_label'),
+      image: ASSETS.PAREJA_BAR,
+      source: 'TripAdvisor' as const,
+    },
+  ];
 
   const totalPages = Math.ceil(TESTIMONIALS.length / 3);
 
@@ -83,8 +85,8 @@ const Testimonials: React.FC = () => {
     <section className="py-12 sm:py-16 lg:py-20 bg-brand-dark">
       <div ref={reveal.ref} className={`max-w-7xl mx-auto px-4 sm:px-6 ${reveal.isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <span className="text-brand-gold text-xs uppercase tracking-[0.4em] font-bold mb-3 sm:mb-4 block">Testimonios</span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-white mb-4 sm:mb-6">Historias que comenzaron entre cafetales</h2>
+          <span className="text-brand-gold text-xs uppercase tracking-[0.4em] font-bold mb-3 sm:mb-4 block">{t('testimonials_eyebrow')}</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-white mb-4 sm:mb-6">{t('testimonials_title')}</h2>
           <div className="flex items-center justify-center gap-2 mt-4">
             <div className="flex gap-0.5">
               {[...Array(5)].map((_, i) => (
@@ -96,7 +98,7 @@ const Testimonials: React.FC = () => {
             <span className="text-white text-lg">5</span>
             <span className="text-white/50 text-sm">/ 5</span>
           </div>
-          <p className="text-white/50 font-light text-base sm:text-lg mt-4">Parejas que celebraron en La Palma & El Tucán Hotel y vivieron una experiencia inolvidable.</p>
+          <p className="text-white/50 font-light text-base sm:text-lg mt-4">{t('testimonials_subtitle')}</p>
         </div>
 
         <div className="relative">
@@ -104,14 +106,14 @@ const Testimonials: React.FC = () => {
           <button
             onClick={goPrev}
             className="absolute -left-4 lg:-left-12 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-colors duration-200"
-            aria-label="Reseñas anteriores"
+            aria-label={t('testimonials_prev')}
           >
             <ChevronLeft size={20} />
           </button>
           <button
             onClick={goNext}
             className="absolute -right-4 lg:-right-12 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-colors duration-200"
-            aria-label="Siguientes reseñas"
+            aria-label={t('testimonials_next')}
           >
             <ChevronRight size={20} />
           </button>
@@ -122,7 +124,7 @@ const Testimonials: React.FC = () => {
                 <div className="aspect-[4/3] overflow-hidden">
                   <img
                     src={testimonial.image}
-                    alt="Matrimonio en La Palma & El Tucán"
+                    alt={t('testimonials_img_alt')}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
@@ -162,7 +164,7 @@ const Testimonials: React.FC = () => {
                     ? 'bg-brand-pink w-6'
                     : 'bg-white/30 hover:bg-white/50'
                 }`}
-                aria-label={`Página ${i + 1}`}
+                aria-label={`${t('testimonials_page')} ${i + 1}`}
               />
             ))}
           </div>

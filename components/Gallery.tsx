@@ -3,28 +3,31 @@ import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { ASSETS } from '../constants';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-
-const GALLERY_IMAGES = [
-  { src: ASSETS.CEREMONIA, alt: "Salida de ceremonia con confeti" },
-  { src: ASSETS.ABRAZO_DORADA, alt: "Abrazo de novios al atardecer" },
-  { src: ASSETS.VOTOS, alt: "Lectura de votos matrimoniales" },
-  { src: ASSETS.MESA_RECEPCION, alt: "Mesa de recepción elegante" },
-  { src: ASSETS.NOVIA_RIENDO, alt: "Novia riendo de felicidad" },
-  { src: ASSETS.CHAMPAGNE, alt: "Brindis de preparativos" },
-  { src: ASSETS.ARCO_FLORAL, alt: "Pareja bajo arco de flores" },
-  { src: ASSETS.PAREJA_BAR, alt: "Pareja en el bar del venue" },
-  { src: ASSETS.NOVIA_CARCAJADA, alt: "Momento de alegría espontánea" },
-  { src: ASSETS.SALIDA_CONFETI, alt: "Celebración con confeti" },
-  { src: ASSETS.NOVIA_HABITACION, alt: "Novia preparándose en la cabaña" },
-  { src: ASSETS.ANILLOS, alt: "Intercambio de anillos" },
-  { src: ASSETS.PAREJA_ARCOIRIS, alt: "Pareja con arcoíris y montañas" },
-];
+import { useI18n } from '../i18n';
 
 const Gallery: React.FC = () => {
   const reveal = useScrollReveal();
+  const { t } = useI18n();
   const [current, setCurrent] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const autoPlayRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  const GALLERY_IMAGES = [
+    { src: ASSETS.CEREMONIA, alt: t('gallery_img_1_alt') },
+    { src: ASSETS.ABRAZO_DORADA, alt: t('gallery_img_2_alt') },
+    { src: ASSETS.VOTOS, alt: t('gallery_img_3_alt') },
+    { src: ASSETS.MESA_RECEPCION, alt: t('gallery_img_4_alt') },
+    { src: ASSETS.NOVIA_RIENDO, alt: t('gallery_img_5_alt') },
+    { src: ASSETS.CHAMPAGNE, alt: t('gallery_img_6_alt') },
+    { src: ASSETS.ARCO_FLORAL, alt: t('gallery_img_7_alt') },
+    { src: ASSETS.PAREJA_BAR, alt: t('gallery_img_8_alt') },
+    { src: ASSETS.NOVIA_CARCAJADA, alt: t('gallery_img_9_alt') },
+    { src: ASSETS.SALIDA_CONFETI, alt: t('gallery_img_10_alt') },
+    { src: ASSETS.NOVIA_HABITACION, alt: t('gallery_img_11_alt') },
+    { src: ASSETS.ANILLOS, alt: t('gallery_img_12_alt') },
+    { src: ASSETS.PAREJA_ARCOIRIS, alt: t('gallery_img_13_alt') },
+  ];
+
   const total = GALLERY_IMAGES.length;
 
   const goTo = useCallback((index: number) => {
@@ -73,9 +76,9 @@ const Gallery: React.FC = () => {
     <section id="gallery" className="py-12 sm:py-16 lg:py-24 bg-[#0a0a0a] overflow-hidden">
       <div ref={reveal.ref} className={`${reveal.isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14 px-4 sm:px-6">
-          <span className="text-brand-pink text-xs uppercase tracking-[0.4em] font-bold mb-3 sm:mb-4 block">Galería</span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-white mb-4 sm:mb-6">Momentos reales</h2>
-          <p className="text-white/50 font-light text-base sm:text-lg">Matrimonios celebrados en La Palma & El Tucán.</p>
+          <span className="text-brand-pink text-xs uppercase tracking-[0.4em] font-bold mb-3 sm:mb-4 block">{t('gallery_eyebrow')}</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-white mb-4 sm:mb-6">{t('gallery_title')}</h2>
+          <p className="text-white/50 font-light text-base sm:text-lg">{t('gallery_subtitle')}</p>
         </div>
 
         {/* Carousel */}
@@ -87,7 +90,6 @@ const Gallery: React.FC = () => {
 
             if (!isVisible) return null;
 
-            // Posición horizontal, escala y opacidad según distancia
             const translateX = offset * 280;
             const scale = isActive ? 1 : Math.abs(offset) === 1 ? 0.75 : 0.55;
             const opacity = isActive ? 1 : Math.abs(offset) === 1 ? 0.4 : 0.15;
@@ -140,14 +142,14 @@ const Gallery: React.FC = () => {
           <button
             onClick={() => { goPrev(); pauseAutoPlay(); }}
             className="absolute left-4 sm:left-8 lg:left-16 top-1/2 -translate-y-1/2 z-40 w-12 h-12 rounded-full bg-white/10 hover:bg-brand-pink/80 text-white/60 hover:text-white flex items-center justify-center transition-all duration-300 backdrop-blur-sm"
-            aria-label="Foto anterior"
+            aria-label={t('gallery_prev')}
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
           <button
             onClick={() => { goNext(); pauseAutoPlay(); }}
             className="absolute right-4 sm:right-8 lg:right-16 top-1/2 -translate-y-1/2 z-40 w-12 h-12 rounded-full bg-white/10 hover:bg-brand-pink/80 text-white/60 hover:text-white flex items-center justify-center transition-all duration-300 backdrop-blur-sm"
-            aria-label="Foto siguiente"
+            aria-label={t('gallery_next')}
           >
             <ChevronRight className="w-6 h-6" />
           </button>
@@ -164,7 +166,7 @@ const Gallery: React.FC = () => {
                   ? 'w-8 h-2 bg-brand-pink'
                   : 'w-2 h-2 bg-white/20 hover:bg-white/40'
               }`}
-              aria-label={`Ir a foto ${idx + 1}`}
+              aria-label={`${t('gallery_go_to')} ${idx + 1}`}
             />
           ))}
         </div>

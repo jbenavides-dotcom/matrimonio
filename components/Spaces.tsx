@@ -3,18 +3,20 @@ import React from 'react';
 import { ASSETS } from '../constants';
 import { Heart, Music, Users, Utensils, Home, TreePine } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
-
-const FACILITIES = [
-  { icon: <Heart className="w-5 h-5" />, title: "Ceremonia al aire libre", label: "Escenarios naturales con vista a montañas y cafetales, donde el paisaje es parte del \"sí, acepto\"." },
-  { icon: <Users className="w-5 h-5" />, title: "Recepción hasta 40 personas", label: "Espacios íntimos que permiten compartir con calma y cercanía." },
-  { icon: <Music className="w-5 h-5" />, title: "Música en vivo & DJ", label: "Desde un atardecer acústico hasta una celebración bajo las estrellas." },
-  { icon: <Utensils className="w-5 h-5" />, title: "Gastronomía de origen", label: "Propuesta elaborada con ingredientes frescos y locales, inspirada en nuestra huerta." },
-  { icon: <Home className="w-5 h-5" />, title: "Cabañas privadas", label: "Alojamiento entre cafetales para que la celebración continúe todo el fin de semana." },
-  { icon: <TreePine className="w-5 h-5" />, title: "Entorno natural único", label: "Bosque de niebla y finca cafetera reconocida mundialmente como marco de tu historia." },
-];
+import { useI18n } from '../i18n';
 
 const Spaces: React.FC = () => {
   const reveal = useScrollReveal();
+  const { t } = useI18n();
+
+  const FACILITIES = [
+    { icon: <Heart className="w-5 h-5" />, title: t('facility_1_title'), label: t('facility_1_label') },
+    { icon: <Users className="w-5 h-5" />, title: t('facility_2_title'), label: t('facility_2_label') },
+    { icon: <Music className="w-5 h-5" />, title: t('facility_3_title'), label: t('facility_3_label') },
+    { icon: <Utensils className="w-5 h-5" />, title: t('facility_4_title'), label: t('facility_4_label') },
+    { icon: <Home className="w-5 h-5" />, title: t('facility_5_title'), label: t('facility_5_label') },
+    { icon: <TreePine className="w-5 h-5" />, title: t('facility_6_title'), label: t('facility_6_label') },
+  ];
 
   return (
     <section id="spaces" className="py-12 sm:py-16 lg:py-20 bg-white">
@@ -23,21 +25,21 @@ const Spaces: React.FC = () => {
           <div className="relative">
             <div className="grid grid-cols-2 gap-3 sm:gap-4">
               <div className="rounded-2xl overflow-hidden aspect-[3/4]">
-                <img src={ASSETS.CEREMONIA} alt="Ceremonia de matrimonio en La Palma & El Tucán" className="w-full h-full object-cover" loading="lazy" />
+                <img src={ASSETS.CEREMONIA} alt={t('spaces_img1_alt')} className="w-full h-full object-cover" loading="lazy" />
               </div>
               <div className="rounded-2xl overflow-hidden aspect-[3/4] translate-y-6 sm:translate-y-10">
-                <img src={ASSETS.NOVIA_HABITACION} alt="Novia preparándose en cabaña de La Palma & El Tucán" className="w-full h-full object-cover" loading="lazy" />
+                <img src={ASSETS.NOVIA_HABITACION} alt={t('spaces_img2_alt')} className="w-full h-full object-cover" loading="lazy" />
               </div>
             </div>
           </div>
 
           <div>
-            <span className="text-brand-pink text-xs uppercase tracking-[0.4em] font-bold mb-3 sm:mb-4 block">Espacios</span>
+            <span className="text-brand-pink text-xs uppercase tracking-[0.4em] font-bold mb-3 sm:mb-4 block">{t('spaces_eyebrow')}</span>
             <h2 className="text-3xl sm:text-4xl font-serif text-brand-dark mb-4 sm:mb-6 leading-tight">
-              Espacios que se integran <br className="hidden sm:block" /><span className="italic text-brand-pink">con la naturaleza</span>
+              {t('spaces_title')} <br className="hidden sm:block" /><span className="italic text-brand-pink">{t('spaces_title_italic')}</span>
             </h2>
             <p className="text-neutral-600 text-base sm:text-lg mb-8 sm:mb-10 leading-relaxed font-light">
-              Rincones entre cafetales, montañas y bosque de niebla donde cada celebración se vive en armonía con el entorno.
+              {t('spaces_subtitle')}
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
